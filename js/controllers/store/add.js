@@ -1,24 +1,17 @@
-angular.module('storeControllers').controller('AddController', ['$scope','$http', function($scope, $http) {
-  
+angular.module('registrationApp').controller('AddController', ['$scope','$http','StoreService', function($scope, $http, StoreService) {
 
-  var data = {
-    name: 'Enfermera',
-    ruc: '1803891900',
-    city: 'Ambato',
-    status: true,
+  $scope.submit = function() {
+    var name = $scope.name;
+    var ruc = $scope.ruc;
+    var city = $scope.city;
+    var store = {name,ruc,city,status:true};
 
-  };
-
-  $http({
-    method: 'POST',
-    url: 'http://localhost:8080/store/add',
-    params: data
-
-  }).then(function successCallback(response) {
-    console.log('la respuesta del post', response);
-    $scope.stores = response.data;
-    }, function errorCallback(response) {
-      console.log('ERROR:', response);
-  });
-
+    StoreService.addStore(store)
+    .then(function successCallback(response) {
+      console.log('la respuesta del post', response);
+      }, function errorCallback(response) {
+          console.log('ERROR:', response);
+      }
+    );
+  }
 }]);

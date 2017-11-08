@@ -8,6 +8,9 @@ registrationApp.config(['$routeProvider', function($routeProvider) {
   when('/', {
     templateUrl: 'markups/login.html',
   }).
+  when('/addStore', {
+    templateUrl: 'markups/storeAdd.html',
+  }).
   when('/list', {
     templateUrl: 'markups/storeList.html',
   }).
