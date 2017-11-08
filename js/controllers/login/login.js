@@ -7,8 +7,5 @@ angular.module('registrationApp').controller('LoginController', ['$scope','Login
       $location.path('/list');
     }
 
-    // console.log('evaluating',LoginService.isValidUser({name,password}));
-
-    // console.log('funcionó el submit', 'name', name, 'city', password);
   };
 }]);
