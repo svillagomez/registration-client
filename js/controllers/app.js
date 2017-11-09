@@ -10,10 +10,10 @@ registrationApp.config(['$routeProvider', function($routeProvider) {
     templateUrl: 'markups/login.html',
   }).
   when('/addStore', {
-    templateUrl: 'markups/storeAdd.html',
+    templateUrl: 'markups/store/add.html',
   }).
   when('/storeList', {
-    templateUrl: 'markups/storeList.html',
+    templateUrl: 'markups/store/list.html',
   }).
   otherwise({
     redirectTo: '/login'

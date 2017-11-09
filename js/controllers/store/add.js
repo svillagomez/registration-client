@@ -1,4 +1,4 @@
-angular.module('registrationApp').controller('AddController', ['$scope','$http','StoreService', function($scope, $http, StoreService) {
+angular.module('registrationApp').controller('AddStoreController', ['$scope','$http','StoreService', function($scope, $http, StoreService) {
 
   $scope.submit = function() {
     var name = $scope.name;
