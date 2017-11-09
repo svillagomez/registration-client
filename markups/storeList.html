@@ -1,6 +1,6 @@
-<div ng-controller="ListController">
+<h1>Store list:</h1>
+<div ng-controller="ListController" pdf-save-content="idOneGraph">
   <ul class="storeList">
-    <div>store list follows:</div>
     <li class="store" ng-repeat="item in stores">
       <div class="info">
         <h2>{{item.name}}</h2>
@@ -10,3 +10,5 @@
     </li>
   </ul>
 </div>
+
+<button pdf-save-button="idOneGraph" pdf-name="stores.pdf" class="btn">Export to PDF</button>

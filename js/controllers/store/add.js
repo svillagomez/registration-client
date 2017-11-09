@@ -8,9 +8,11 @@ angular.module('registrationApp').controller('AddController', ['$scope','$http',
 
     StoreService.addStore(store)
     .then(function successCallback(response) {
-      console.log('la respuesta del post', response);
+        $scope.name = '';
+        $scope.ruc = '';
+        $scope.city = '';
       }, function errorCallback(response) {
-          console.log('ERROR:', response);
+          console.log('ERROR: -->', response.toString());
       }
     );
   }
