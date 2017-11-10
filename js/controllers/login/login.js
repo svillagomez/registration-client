@@ -1,4 +1,6 @@
-angular.module('registrationApp').controller('LoginController', ['$scope','LoginService','$location', 'Authentication', function($scope,LoginService,$location,Authentication) { 
+angular.module('registrationApp').controller('LoginController', ['$scope','LoginService','$location', 'Authentication', '$timeout', function($scope,LoginService,$location,Authentication, $timeout) {
+
+  $scope.showError = false;
 
   $scope.submit = function() {
     var name = $scope.name;
@@ -7,6 +9,11 @@ angular.module('registrationApp').controller('LoginController', ['$scope','Login
     if(LoginService.isValidUser({name,password})){
       Authentication.setAuthenticated(true);
       $location.path('/storeList');
+    } else {
+      $scope.showError = true;
+      $timeout(function() {
+        $scope.showError = false;
+      }, 2000);
     }
   };
 
