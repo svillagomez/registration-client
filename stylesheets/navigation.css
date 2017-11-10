@@ -1,0 +1,24 @@
+.navigation {
+  display: flex;
+  background-color: #16a085;
+  justify-content: space-around;
+  height: 80px; 
+  text-transform: uppercase;
+}
+
+
+.navigation .button {
+  display: flex;
+  padding-right: 3vw;
+  padding-left: 3vw;
+  align-items: center;
+}
+
+.navigation .button a{
+  text-decoration: none;
+  color: white;
+}
+
+.navigation .button a:hover{
+  text-decoration: underline
+}
