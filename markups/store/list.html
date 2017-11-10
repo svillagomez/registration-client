@@ -1,7 +1,11 @@
+<div class="list searchContainer">
+  <input class="search" ng-model="query" type="text" placeholder="Filter by" autofocus>
+</div>
+
 <div class="list" ng-controller="StoreListController" pdf-save-content="idOneGraph">
   <h1 class="title">Store list:</h1>
   <ul class="storeList">
-    <li class="store" ng-repeat="item in stores">
+    <li class="store" ng-repeat="item in stores | filter:query">
       <div class="info">
         <h2>{{item.name}}</h2>
         <h3>{{item.city}}</h3>

@@ -1,7 +1,12 @@
+
+<div class="list searchContainer">
+  <input class="search" ng-model="query" type="text" placeholder="Filter by" autofocus>
+</div>
+
 <div class="list" ng-controller="UserListController">
   <h1 class="title">User list:</h1>
   <ul class="userList">
-    <li class="users" ng-repeat="user in users">
+    <li class="users" ng-repeat="user in users | filter:query">
       <div class="info">
         <h2>{{user.name}}</h2>
         <h3>{{user.userName}}</h3>
