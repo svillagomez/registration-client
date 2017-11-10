@@ -4,7 +4,7 @@ angular.module('registrationApp').controller('AddUserController', ['$scope','$ht
     var name = $scope.name;
     var email = $scope.email;
     var city = $scope.city;
-    var userName = $scope.username;
+    var userName = $scope.userName;
     var password = $scope.password;
 
     var user = {name, email, city, userName, password, status:true};

@@ -10,6 +10,7 @@
   <script src="js/controllers/store/list.js"></script>
   <script src="js/controllers/store/add.js"></script>
   <script src="js/controllers/user/add.js"></script>
+  <script src="js/controllers/user/list.js"></script>
   <script src="js/controllers/login/login.js"></script>
   <script src="js/controllers/register/register.js"></script>
   <script src="js/services/login.js"></script>
@@ -30,14 +31,17 @@
 
   <nav class="navigation" class="{{active}}">
     <div class="button">
-        <a href="#!/storeList" class="home" ng-click="active='home'">Store List</a>
+        <a href="#!/storeList" class="home" ng-click="active='store-list'">Store List</a>
     </div>
     <div class="button">
-        <a href="#!/addStore" class="about" ng-click="active='about'">Register Store </a>
+        <a href="#!/addStore" class="about" ng-click="active='add-store'">Register Store </a>
     </div>
     <div class="button">
-      <a href="#!/addUser" class="contact" ng-click="active='contact'">Register User</a>
+      <a href="#!/userList" class="contact" ng-click="active='add-user'">User List</a>
     </div>
+    <div class="button">
+        <a href="#!/addUser" class="contact" ng-click="active='user-list'">Register User</a>
+      </div>
   </nav>
 
   <div class="main" ng-view>

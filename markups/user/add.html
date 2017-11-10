@@ -1,20 +1,17 @@
-<div ng-controller="AddUserController">
+<div class="add-entity" ng-controller="AddUserController">
   <form action="/" id="login">
-    <label>
-      Name<input type="text" ng-model="name"></input>
-    </label><br>
-    <label>
-      e-mail<input type="email" ng-model="email"></input>
-    </label><br>
-    <label>
-      City<input type="text" ng-model="city"></input>
-    </label><br>
-    <label>
-      Username<input type="text" ng-model="userName"></input>
-      </label><br>
-    <label>
-      Password<input type="password" ng-model="password" minlength="8" required></input>
-    </label><br>
-    <button type="button" ng-click="submit()">Add User</button>
+    <div class="title">
+      <span class="number">1</span>
+      <h1>User info</h1>
+    </div>
+    <div class="container">
+      <input class="input" type="text" ng-model="name" placeholder="Name"></input>
+      <input class="input" type="email" ng-model="email" placeholder="E-mail"></input>
+      <input class="input" type="text" ng-model="city" placeholder="City"></input>
+      <input class="input" type="text" ng-model="userName" placeholder="Username"></input>
+      <input class="input" type="password" ng-model="password" minlength="8" required placeholder="Password"></input>
+    </div>
+
+    <button class="button" type="button" ng-click="submit()">Add User</button>
   </form>
 </div>
