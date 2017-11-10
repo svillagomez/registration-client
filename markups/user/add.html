@@ -1,0 +1,20 @@
+<div ng-controller="AddUserController">
+  <form action="/" id="login">
+    <label>
+      Name<input type="text" ng-model="name"></input>
+    </label><br>
+    <label>
+      e-mail<input type="email" ng-model="email"></input>
+    </label><br>
+    <label>
+      City<input type="text" ng-model="city"></input>
+    </label><br>
+    <label>
+      Username<input type="text" ng-model="userName"></input>
+      </label><br>
+    <label>
+      Password<input type="password" ng-model="password" minlength="8" required></input>
+    </label><br>
+    <button type="button" ng-click="submit()">Login</button>
+  </form>
+</div>

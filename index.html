@@ -9,10 +9,12 @@
   <script src="js/controllers/store/store.js"></script>
   <script src="js/controllers/store/list.js"></script>
   <script src="js/controllers/store/add.js"></script>
+  <script src="js/controllers/user/add.js"></script>
   <script src="js/controllers/login/login.js"></script>
   <script src="js/controllers/register/register.js"></script>
   <script src="js/services/login.js"></script>
   <script src="js/services/store.js"></script>
+  <script src="js/services/user.js"></script>
   <script src="js/services/authentication.js"></script>
   <script src="lib/modules/saveHtmlToPdf.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
@@ -24,7 +26,7 @@
   <nav class="{{active}}">
     <a href="#!/storeList" class="home" ng-click="active='home'">Store List</a>
     <a href="#!/addStore" class="about" ng-click="active='about'">Register Store </a>
-    <a href="#" class="contact" ng-click="active='contact'">Register User</a>
+    <a href="#!/addUser" class="contact" ng-click="active='contact'">Register User</a>
   </nav>
 
   <div class="main" ng-view>

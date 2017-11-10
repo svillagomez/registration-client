@@ -15,6 +15,9 @@ registrationApp.config(['$routeProvider', function($routeProvider) {
   when('/storeList', {
     templateUrl: 'markups/store/list.html',
   }).
+  when('/addUser', {
+    templateUrl: 'markups/user/add.html',
+  }).
   otherwise({
     redirectTo: '/login'
   })
